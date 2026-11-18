@@ -34,7 +34,7 @@ function renderTranscript(items) {
     if (!turns.length) return;
     body.innerHTML = turns.map(t => `
         <div class="transcript-line ${t.role}" style="margin:0 0 10px;padding:10px 14px;border-radius:14px;max-width:85%;${t.role === "user" ? "margin-left:auto;background:#f3e8ff;" : "background:#f7f7f7;"}">
-            <strong style="display:block;font-size:12px;opacity:.7;margin-bottom:2px;">${t.role === "user" ? "You" : "DB Mart Assistant"}</strong>
+            <strong style="display:block;font-size:12px;opacity:.7;margin-bottom:2px;">${t.role === "user" ? "You" : "Munchies on Maple Assistant"}</strong>
             ${String(t.content).replace(/[<>&]/g, c => ({ "<": "&lt;", ">": "&gt;", "&": "&amp;" }[c]))}
         </div>`).join("");
     body.scrollTop = body.scrollHeight;
